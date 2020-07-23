@@ -5,8 +5,8 @@
 }
 
 @font-face {
-    font-family: Monserrat;
-    src: url(font/MontserratAlternates-Medium.otf) format("truetype");
+    font-family: Inter-Regular;
+    src: url(font/Inter-Regular.ttf) format("truetype");
 }
 
 body {
@@ -14,40 +14,62 @@ body {
   }
   
 li {
-    font-family: Monserrat;
+    font-family: Inter-Regular;
     list-style: none;
 }
-  
-.header {
+
+nav {
     color: #FFFFFF;
     width: 100%;
     height: 80px;
     background-color: #021e41;
     position: fixed;
 }
-  
-.header-logo {
-    float: left;
-    font-size: 32px;
-    padding: 20px 40px;
+
+nav ul {
+    float: right;
 }
 
-.header-list {
-    padding-left: 300px;
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
 }
 
-.header-list li {
-    float: left;
-}
-
-.header-list a {
-    float: left;
-    padding: 33px 20px;
+nav ul li a {
+    padding: 0 20px;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.banner {
+nav ul li a:hover {
+    color: #bfbfbf;
+    text-decoration: underline;
+    transition: .45s;
+}
+
+.logo h4 {
+    color: #FFFFFF;
+    float: left;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px 40px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.jumbotron {
     background: linear-gradient(rgba(0, 0, 0, 0.25),
     rgba(0, 0, 0, 0.25)), url(img/jumbotron.jpg);
     background-repeat: no-repeat;
@@ -57,27 +79,20 @@ li {
     height: 700px;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 45%;
-  }
-
-.content {
+.jumbotron-content {
     padding: 300px 100px;
     text-align: left;
     color: #FFFFFF;
 }
 
-.main-content {
+.content-area {
     padding: 70px 100px;
     text-align: justify;
     color: black;
 }
 
 .card-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -117,14 +132,9 @@ li {
 }
 
 .card-text h2 {
-    margin: 10px;
-    font-size: 10px;
-    text-align: left;
-}
-
-.card-text .date {
-    color: rgb(255, 7, 110);
-    font-size:13px;
+    margin: 10px 10px;
+    font-size: 28px;
+    text-align: center;
 }
 
 .card-text p {
@@ -132,10 +142,6 @@ li {
     font-size:15px;
     font-weight: 300;
     
-}
-.card-text h2 {
-    margin-top:0px;
-    font-size:28px;
 }
 
 .card-stats {
@@ -182,7 +188,7 @@ li {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
   
-  /*Kartu 2*/
+/*Kartu 2*/
 .card-image.card2 {
     background: url(img/2.jpg);
     background-size: cover;
@@ -246,6 +252,13 @@ li {
     width: 100px;
 }
 
+.clients {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
 /*Kontak*/
 .contact-form {
     padding-top: 100px;
@@ -267,7 +280,7 @@ input, textarea {
 
 .main {
     padding: 100px 80px;
-  }
+}
 
 .section-title {
     border-bottom: 2px solid #dee7ec;
@@ -281,7 +294,7 @@ input, textarea {
     color: #fff;
     height: 250px;
     padding: 40px;
-  }
+}
 
 .footer-logo {
     float: left;
@@ -304,4 +317,34 @@ input, textarea {
 .clients-container {
     display: grid;
     margin: 100px 100px;
+}
+
+@media (max-width: 1080px) {
+    .checkbtn {
+        display: block;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #021e5a;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover {
+        background: none;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
 }

@@ -2,34 +2,43 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Progate</title>
+    <meta name="viewport" class="width=device-width, initial-scale=1.0">
+    <title>Allsafe Corp.</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="font/font-awesome.js"></script>
   </head>
 
   <body>
-    <!--Navbar-->
-    <div class="header">
-        <div class="header-logo">AllSafe Corp.</div>
-        <div class="header-list">
+    <header>
+        <!--Navbar-->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="logo">
+                <h4>AllSafe Corp.</h4>
+            </div>
             <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Careers</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Careers</a></li>
             </ul>
+        </nav>
+        <!--Jumbotron-->
+        <div class="jumbotron">
+            <div class="jumbotron-content">
+                <h1>HELLO WORLD!</h1>
+                <h3>Allsafe is a highly innovative company based in Indonesia, focusing on the exploding market of information security in the Southeast Asia (SEA).</h3>
+            </div>
         </div>
-    </div>
-    <!--Jumbotron-->
-    <div class="banner">
-        <div class="content">
-            <h1>HELLO WORLD!</h1>
-            <h3>Allsafe is a highly innovative company based in Indonesia, focusing on the exploding market of information security in the Southeast Asia (SEA).</h3>
-        </div>
-    </div>
+    </header>
     <!--About-->
     <div class="about">
-        <div class="main-content">
+        <div class="content-area">
             <h1>About Us</h1>
             <p style="font-size: 20px">Our business consulting technology services that can help you adapt to today’s market dynamics and continue to compete no matter the threats you might be facing.  Tools to enable optimal remote work can help minimize or prevent disruption in your operations. From evolving customer expectations and emerging technologies to more nimble companies entering industries, businesses today are more at risk for disruption than ever before. Whether you’re experiencing challenges with company culture, internal processes or need a new business strategy to reflect your envisioned future, we’re here to help.
             <br><br>
@@ -70,12 +79,12 @@
             </div>
         </div>
     </div>
-    <!--Klien-->
-    <div class="about">
-        <div class="main-content">
+    <!--Clients-->
+    <div class="clients-container">
+        <div class="content-area">
             <h1>Our Clients</h1>
         </div>
-        <img class="center" src="img/companies.png" alt="">
+        <img class="clients" src="img/companies.png" alt="">
     </div>
     <!--Form-->
     <div class="main">
@@ -96,7 +105,7 @@
         <div class="footer">
             <div class="footer-logo">
                 <h2>Allsafe Corp.</h2>
-                <p>Silicon Tower 13th Floor</p>
+                <p>Silicon Valley Tower 13th Floor</p>
                 <p>Jakarta, Indonesia</p>
                 <p>(024) 22446688</p>
             </div>
